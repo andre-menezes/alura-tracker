@@ -8,13 +8,13 @@
         <span class="icon">
           <i class="fas fa-play"></i>
         </span>
-        <span>Play</span>
+        <span>Iniciar</span>
       </button>
       <button class="button" :disabled="!isTimeInProgress" @click="stopTimer">
         <span class="icon">
           <i class="fas fa-stop"></i>
         </span>
-        <span>Stop</span>
+        <span>Finalizar</span>
       </button>
     </div>
     <AlertDialog />
