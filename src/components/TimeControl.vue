@@ -4,18 +4,10 @@
       <section>
         <strong>{{ timer }}</strong>
       </section>
-      <button class="button" :disabled="!task || isTimeInProgress" @click="startTimer">
-        <span class="icon">
-          <i class="fas fa-play"></i>
-        </span>
-        <span>Iniciar</span>
-      </button>
-      <button class="button" :disabled="!isTimeInProgress" @click="stopTimer">
-        <span class="icon">
-          <i class="fas fa-stop"></i>
-        </span>
-        <span>Finalizar</span>
-      </button>
+      <ActionButton styleContent="button is-success" label="INICIAR" icon="fas fa-play"
+        :disabled="!task || isTimeInProgress" @action="startTimer" />
+      <ActionButton styleContent="button is-danger" label="FINALIZAR" icon="fas fa-stop" :disabled="!isTimeInProgress"
+        @action="stopTimer" />
     </div>
     <AlertDialog />
   </div>
@@ -23,10 +15,12 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import ActionButton from './ActionButton.vue';
 
 export default defineComponent({
   name: 'TimeControl',
   emits: ["taskIsDone"],
+  components: { ActionButton },
   props: {
     task: {
       type: String,
@@ -46,17 +40,19 @@ export default defineComponent({
     }
   },
   methods: {
-    startTimer() {
+    startTimer(): void {
       this.isTimeInProgress = true;
       this.count = setInterval(() => {
         this.seconds += 1;
       }, 1000);
     },
-    stopTimer() {
+    stopTimer(): void {
       this.isTimeInProgress = false;
       clearInterval(this.count);
       this.$emit('taskIsDone', this.seconds);
       this.seconds = 0;
+      const audio = new Audio(process.env.BASE_URL + 'endTask.mp3');
+      audio.play();
     }
   },
 })
