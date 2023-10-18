@@ -2,18 +2,17 @@
 
 Bem-vindo ao Alura Tracker, um projeto de gerenciamento de tempo de tarefas simples, desenvolvido para ajudar os usuários a controlar e registrar o tempo gasto em suas tarefas. Esta aplicação oferece uma interface fácil de usar que permite aos usuários iniciar, parar e acompanhar o tempo dedicado a cada tarefa.
 
-![Alura Tracker](https://exemplo.com/imagem.png)
+![AluraTracker](https://github.com/andre-menezes/alura-tracker/assets/69818988/0e2d727b-2255-4146-bb1c-ec05e3df3fe0)
+
 
 ## Conteúdo
 
-- [Documentação do Projeto Alura Tracker](#documentação-do-projeto-alura-tracker)
-  - [Conteúdo](#conteúdo)
-  - [1. Introdução](#1-introdução)
-  - [2. Requisitos](#2-requisitos)
-  - [3. Instalação](#3-instalação)
-  - [4. Uso](#4-uso)
-  - [5. Funcionalidades](#5-funcionalidades)
-  - [6. Licença](#6-licença)
+- [1. Introdução](#1-introdução)
+- [2. Requisitos](#2-requisitos)
+- [3. Instalação](#3-instalação)
+- [4. Uso](#4-uso)
+- [5. Funcionalidades](#5-funcionalidades)
+- [6. Licença](#6-licença)
 
 ## 1. Introdução
 
@@ -39,31 +38,31 @@ Antes de começar a usar o Alura Tracker, certifique-se de que seu ambiente aten
 - Clonar o projeto
 
 ```
-git clone git@github.com:andre-menezes/alura-tracker.git
+git clone https://github.com/andre-menezes/alura-tracker.git
 ```
 
 - Instalar as dependências do projeto
 
 ```
-yarn install
+npm install
 ```
 
 - Executar o projeto em desenvolvimento
 
 ```
-yarn serve
+npm run serve
 ```
 
 - Compilar e minificar para produção
 
 ```
-yarn build
+npm run build
 ```
 
 - Executar Lint para correção de erros
 
 ```
-yarn lint
+npm run lint
 ```
 
 - Ou você pode utilizar o projeto diretamente em:
@@ -76,11 +75,11 @@ O uso do Alura Tracker é simples e intuitivo. Siga os passos abaixo:
 
 1. Acesse o Alura Tracker no seu navegador.
 
-2. Digite o nome da tarefa que você deseja realizar no campo "Nome da Tarefa".
+2. Digite o nome da tarefa que você deseja realizar no campo "Qual tarefa deseja iniciar?".
 
-3. Clique no botão "PLAY" para iniciar o temporizador.
+3. Clique no botão "INICIAR" para iniciar o temporizador.
 
-4. Quando a tarefa estiver concluída, clique no botão "STOP" para parar o temporizador.
+4. Quando a tarefa estiver concluída, clique no botão "FINALIZAR" para parar o temporizador.
 
 5. A tarefa concluída será automaticamente adicionada ao histórico de tarefas.
 
