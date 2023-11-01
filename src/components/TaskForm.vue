@@ -1,5 +1,5 @@
 <template>
-  <div class="column is-7" role="form" aria-label="Task form create">
+  <div class="column is-7 form" role="form" aria-label="Task form create">
     <input v-model="newTask" type="text" placeholder="Qual tarefa deseja iniciar?" class="input" />
   </div>
 </template>
@@ -36,3 +36,9 @@ export default defineComponent({
   }
 })
 </script>
+
+<style>
+.form {
+  background-color: var(--bg-secondary);
+}
+</style>

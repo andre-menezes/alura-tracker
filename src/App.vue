@@ -1,17 +1,17 @@
 <template>
-  <main class="columns is-gapless is-multiline is-fullheight">
+  <main class="columns is-gapless is-multiline is-fullheight" :class="{ 'dark': darkMode }">
     <div class="column is-one-quarter">
-      <SideBar />
+      <SideBar @darkMode="handleTheme" />
     </div>
-    <div class="column is-three-quarter">
-      <div class="box">
-        <div class="columns">
+    <div class="column is-three-quarter content">
+      <div class="box content">
+        <div class="columns box__content">
           <TaskForm :task="task" @taskDescription="updateTask" @add="addTask" />
           <TimeControl :task="task" @taskIsDone="addTask" />
         </div>
         <div v-if="taskList.length">
           <div class="is-flex is-justify-content-space-between">
-            <h1 class="title is-4 has-text-weight-bold">Histórico de Tarefas</h1>
+            <h1 class="text title is-4 has-text-weight-bold">Histórico de Tarefas</h1>
             <ActionButton styleContent="button is-danger is-small" label="LIMPAR LISTA" icon="fas fa-ban"
               @action="clearTaskList" />
           </div>
@@ -45,7 +45,8 @@ export default defineComponent({
     return {
       task: '',
       taskList: [] as TaskList[],
-      isTaskComplete: false
+      isTaskComplete: false,
+      darkMode: false
     }
   },
   created() {
@@ -76,6 +77,9 @@ export default defineComponent({
       setTimeout(() => {
         this.isTaskComplete = false;
       }, 4000);
+    },
+    handleTheme(darkMode: boolean) {
+      this.darkMode = darkMode;
     }
   }
 });
@@ -86,5 +90,43 @@ export default defineComponent({
   top: 0.8rem;
   position: absolute;
   width: auto;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+main {
+  --bg-primary: #ebebeb;
+  --bg-secondary: #0d3b66;
+  --text-primary: #454545;
+  --text-white: #ebebeb
+}
+
+main.dark {
+  --bg-primary: #252525;
+  --bg-secondary: #454545;
+  --text-primary: #ebebeb;
+}
+
+.content {
+  background-color: var(--bg-primary);
+  border-radius: 0;
+  color: var(--text-primary);
+}
+
+.box {
+  border-radius: 0;
+}
+
+.box__content {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.text {
+  color: var(--text-primary) !important;
 }
 </style>

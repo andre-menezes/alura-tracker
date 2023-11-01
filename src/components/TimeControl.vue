@@ -2,7 +2,7 @@
   <div class="column">
     <div class="is-flex is-align-items-center is-justify-content-space-between">
       <section>
-        <strong>{{ timer }}</strong>
+        <strong class="timeControl">{{ timer }}</strong>
       </section>
       <ActionButton styleContent="button is-success" label="INICIAR" icon="fas fa-play"
         :disabled="!task || isTimeInProgress" @action="startTimer" />
@@ -57,3 +57,9 @@ export default defineComponent({
   },
 })
 </script>
+
+<style>
+.timeControl {
+  color: var(--text-white);
+}
+</style>
