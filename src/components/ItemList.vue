@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <ul>
-      <li v-for="(item, index) in list" :key="index">
-        <TaskItem :task="item.task" :time="item.time" @action="removeItem" />
-      </li>
-    </ul>
-  </div>
+  <ul :style="{ margin: 0 }">
+    <li v-for="(item, index) in list" :key="index">
+      <TaskItem :task="item.task" :time="item.time" @action="removeItem" />
+    </li>
+  </ul>
 </template>
 
 <script lang="ts">
