@@ -67,7 +67,7 @@ npm run lint
 
 - Ou você pode utilizar o projeto diretamente em:
 
-[Alura Tracker](https://exemplo.com/alura-tracker)
+[Alura Tracker](https://amcodetech-alura-tracker.vercel.app/)
 
 ## 4. Uso
 
@@ -87,7 +87,7 @@ O uso do Alura Tracker é simples e intuitivo. Siga os passos abaixo:
 
 7. Você pode remover tarefas individuais do histórico clicando no ícone de lixeira ao lado de cada tarefa.
 
-8. Se desejar, é possível limpar todo o histórico de tarefas clicando no botão "Limpar Histórico".
+8. Se desejar, é possível limpar todo o histórico de tarefas clicando no botão "Limpar Lista".
 
 ## 5. Funcionalidades
 
