@@ -102,4 +102,4 @@ O Alura Tracker oferece as seguintes funcionalidades:
 
 ## 6. Licença
 
-O Alura Tracker é distribuído sob a licença MIT. Você pode encontrar o texto completo da licença no arquivo [LICENSE](link-para-a-licença) dentro deste repositório.
+O Alura Tracker é distribuído sob a licença MIT. Você pode encontrar o texto completo da licença no arquivo [LICENSE](link-para-a-licença](https://github.com/andre-menezes/alura-tracker/blob/main/LICENSE)https://github.com/andre-menezes/alura-tracker/blob/main/LICENSE) dentro deste repositório.
